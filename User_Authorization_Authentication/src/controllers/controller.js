@@ -8,7 +8,7 @@ const register = (req, res) => {
   const email = req.body.email;
   const name = req.body.name;
   const pass = req.body.pass;
-  const role = req.body.email;
+  const role = req.body.role;
   const newUser = new User(email, name, pass, role);
   req.userVerify = newUser.verify();
   if (req.userVerify !== -1) {
